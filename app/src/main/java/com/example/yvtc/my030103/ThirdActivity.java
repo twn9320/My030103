@@ -16,7 +16,9 @@ public class ThirdActivity extends AppCompatActivity {
         tv=(TextView)findViewById(R.id.textView2);
 
         Intent it =getIntent();
-        String m = it.getStringExtra("msg");  //取的鍵值msg
+       // String m = it.getStringExtra("msg");  //取的鍵值msg
+        Bundle b =it.getExtras();
+        String m =b.getString("msg");
         tv.setText(m);
     }
 }

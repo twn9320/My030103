@@ -22,7 +22,10 @@ public class MainActivity extends AppCompatActivity {
         EditText ed=(EditText)findViewById(R.id.editText);
         String str = ed.getText().toString();
         Intent it =new Intent(MainActivity.this,ThirdActivity.class);
-        it.putExtra("msg",str);  //給定msg為鍵值  接收端要取得鍵值
+        // it.putExtra("msg",str);  //給定msg為鍵值  接收端要取得鍵值
+        Bundle b =new Bundle();  //Bundle 用在要傳遞資料大 或者有許多資料來源
+        b.putString("msg",str);
+        it.putExtras(b);
         startActivity(it);
     }
 }
