@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {  //跳回第一頁時執行
         super.onActivityResult(requestCode, resultCode, data);
         TextView tv5 =(TextView)findViewById(R.id.textView5);
         tv5.setText(data.getStringExtra("ans"));
